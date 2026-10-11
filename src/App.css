@@ -1,0 +1,71 @@
+html, body {
+  margin: 0; /* entfertn Aussenabstand */
+  padding: 0; /* entfertn Innenabstand */
+}
+
+.App {
+  min-height: 100vh; /* Mindesthöhe, 100 Prozent der Bildschirmhöhe */
+  display: flex; /* aktiviert Felxbox */
+  flex-direction: column} /* Kinder(header, hauptbereich, footer) werden untereinander angeordnet */
+
+.App-header { /*Header allgemeine Definitionen */
+  background-color: #2156c1;
+  min-height: 7vh; /*Header ist mindestens 7 % der Fensterhöhe hoch*/
+  color: white;
+  margin-bottom: 40px; /*Erzeugt 40 Pixel Abstand unter dem Header*/
+}
+
+.App-header p {  /* Untertitel */
+ font-size: 20px;
+ margin: 0; /*Alle Aussenabstände des Untertitels werden entfernt*/
+}
+
+.App-header h1{ /*Übertitel*/
+    font-size: 30px;
+}
+
+.App-footer {
+  
+  background-color: #2156c1;
+  min-height: 4vh; /*Footer ist mindestens 4 % der Fensterhöhe hoch*/
+  display: flex; /*Aktiviert Flexbox im Footer*/
+  align-items: center; /*Zentriert den Inhalt horizontal*/
+  justify-content: center; /*Zentriert den Inhalt vertikal*/
+  font-size: 10px;
+  color: white;
+   margin-top: auto; /*Schiebt den Footer bei freiem Platz nach unten*/
+}
+
+.Hauptbereich {
+  display: flex; /*aktiviert Flexbox für Bildbereich und Bedienung*/
+  flex-direction: row-reverse; /*ordnet kinder nebeneinander an*/
+  align-items: center; /*Zentriert die Kinder vertikal*/
+  gap: 30px; /*Erzeugt 30 Pixel Abstand zwischen den Kindern*/
+  flex: 1; /*Lässt den Hauptbereich den verfügbaren freien Platz in .App ausfüllen*/
+}
+
+
+.Bildbereich {
+  flex: 1; /*Der Bildbereich nimmt den verfügbaren freien Platz im Hauptbereich ein*/
+  height: 650px;
+  display: flex; /*Aktiviert Flexbox innerhalb des Bildbereichs, für zentrierung*/
+  justify-content: center;
+  align-items: center;
+}
+
+.Katzenbild {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+    
+
+.Bedienung {
+  flex: 0 0 220px; /*Reserviert für die Bedienung eine Breite von 220 Pixeln*/
+  display: flex; /*Aktiviert Flexbox innerhalb der Bedienung*/
+  flex-direction: column; /*Ordnet Checkbox, Beschriftungen und Schieberegler untereinander an*/
+  gap: 15px; /*Erzeugt 15 Pixel Abstand zwischen den Elementen*/
+  
+}
+
+
